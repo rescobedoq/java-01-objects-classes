@@ -1,0 +1,238 @@
+\documentclass[11pt,a4paper]{beamer}
+\usepackage{listings} % Include the listings-package
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb, amsfonts, latexsym, cancel}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{booktabs} % Allows the use of \toprule, 
+\usepackage{filecontents}
+\usepackage{courier} %% Sets font for listing as Courier.
+\usepackage{listings}
+\lstset{
+tabsize = 2, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = left, %% display line numbers on the left
+commentstyle = \color{green}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\definecolor{urlColor}{rgb}{0.06, 0.3, 0.57}
+\definecolor{linkColor}{rgb}{0.57, 0.0, 0.04}
+\definecolor{fileColor}{rgb}{0.0, 0.26, 0.26}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkColor,
+    filecolor=fileColor,      
+    urlcolor=urlColor,
+}
+\urlstyle{same}
+\setbeamercovered{transparent}
+\usetheme{CambridgeUs}
+
+\title[Classes and Objects]{\bf\Huge Classes and Objects}
+\subtitle{Fundamentals to programming I}
+
+\author[rhuayllanid]
+{
+	Raul Huayllani Diaz 
+}
+\institute[UNSA]
+{
+\inst{1} 
+System Engineering School\\
+System Engineering and Informatic Department\\
+Production and Services Faculty\\
+San Agustin National University of Arequipa
+\includegraphics[scale=0.25]{../../../../../expo_fotos/FotoUnsa.png} 
+}
+\date[2020-08-04]{\scriptsize{2020-08-04}}
+
+\begin{document}
+\maketitle
+\begin{frame}
+\frametitle{CONTENT}
+\begin{itemize}
+\item CLASS DEFINITION
+\item PRINCIPLES FOR CREATING A CLASS
+\item SYNTAX AND ERROR 
+\item CLASS EXAMPLE
+\item NESTED CLASSES
+\item Inner Classes
+\item Method local Inner classes
+\item Anonymous Inner classes
+\item Static Nested classes
+\item OBJECT DEFINITION
+\item STEPS TO CREATE AN OBJECT
+\item SYNTAX OF AN OBJECT AND ERRORS
+\item EXAMPLE OF A OBJECT
+
+\end{itemize}
+
+\end{frame}
+
+\section{CLASSES IN JAVA}
+\begin{frame}
+\frametitle{CLASS DEFINITION}
+The class is the essence of Java. It is the foundation on which the entire Java language is built because the class defines the nature of an object. As such, the class forms the basis for object-oriented programming in Java. Within a class the data and the code that acts on that data are defined.
+\end{frame}
+
+\begin{frame}
+\frametitle{PRINCIPLES FOR CREATING A CLASS}
+\begin{itemize}
+\item Single Responsibility Principle (SRP)
+\item Open Closed Responsibility (OCP)
+\item Liskov Substitution Responsibility (LSR)
+\item Principle of investment of dependency (DIP)
+\item Principle of Segregation of Interface (ISP)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{SYNTAX AND ERRORS}
+\begin{center}
+\includegraphics[scale=0.35]{../../../../../expo_fotos/correct_error.jpg} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{CLASS EXAMPLE}
+\begin{center}
+\includegraphics[scale=0.65]{../../../../../expo_fotos/clase_miPerro.jpg} 
+\end{center}
+\end{frame}
+
+\section{NESTED CLASSES}
+\begin{frame}
+\frametitle{NESTED CLASSES}
+\begin{center}
+\includegraphics[scale=0.7]{../../../../../expo_fotos/NESTED_CLASSES.jpg}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Inner Classes}
+Creating an inner class is quite simple. You just need to write a class within a class. Unlike a class, an inner class can be private, and once you declare that an inner class is private, it cannot be accessed from an object outside the class.
+\end{frame}
+
+\begin{frame}
+\frametitle{Inner Classes}
+\begin{center}
+\includegraphics[scale=0.45]{../../../../../expo_fotos/Clase_Interior.jpg} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Method local Inner classes}
+In Java, we can write a class inside a method and this will be a local type. Like local variables, the scope of the inner class is restricted within the method.
+A local method inner class can only be instantiated within the method where the inner class is defined.
+\end{frame}
+
+\begin{frame}
+\frametitle{Method local Inner classes}
+\begin{center}
+\includegraphics[scale=0.55]{../../../../../expo_fotos/clase_interna_local.jpg} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Anonymous Inner classes}
+An inner class declared without a class name is known as an anonymous inner class. In case of anonymous inner classes, we declare and instantiate them at the same time. In general, they are used whenever you need to override the method of a class or interface.
+\end{frame}
+
+\begin{frame}
+\frametitle{Anonymous Inner classes}
+\begin{center}
+\includegraphics[scale=0.55]{../../../../../expo_fotos/clase_interna_anonima.jpg} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Static Nested classes}
+A static inner class is a nested class that is a static member of the outer class. It can be accessed without instantiating the outer class, using other static members. Like static members, a static nested class does not have access to the instance variables and methods of the outer class.
+\end{frame}
+
+\begin{frame}
+\frametitle{Static Nested classes}
+\begin{center}
+\includegraphics[scale=0.65]{../../../../../expo_fotos/Clase_Anidada.jpg} 
+\end{center}
+\end{frame}
+
+\section{OBJECTS IN JAVA}
+\begin{frame}
+\frametitle{OBJECT DEFINITION}
+An object is nothing more than a stand-alone component consisting of methods and properties to make a particular type of data useful. The object determines the behaviour of the class. When you send a message to an object, you ask the object to invoke or execute one of its methods.
+\end{frame}
+
+\begin{frame}
+\frametitle{STEPS TO CREATE AN OBJECT}
+\begin{itemize}
+\item DECLARATION: A variable declaration with a variable name with an object type.
+\item INSTANTIATION: The keyword 'new' is used to create the object.
+\item INITIALIZATION: The keyword 'new' is followed by a call to a constructor. This call initializes the new object.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{SYNTAX OF AN OBJECT AND ERRORS}
+The new operator:
+
+It allows us to create objects in Java.
+\begin{center}
+\includegraphics[scale=0.55]{../../../../../expo_fotos/NewOperador.jpg} 
+\includegraphics[scale=0.4]{../../../../../expo_fotos/ObjCre.jpg} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{SYNTAX OF AN OBJECT AND ERRORS}
+\begin{center}
+\includegraphics[scale=0.4]{../../../../../expo_fotos/object.jpg} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{EXAMPLE OF A OBJECT}
+\begin{center}
+\includegraphics[scale=0.75]{../../../../../expo_fotos/Objeto.jpg} 
+\end{center}
+\end{frame}
+
+\section{References}
+\begin{frame}
+\frametitle{References - Web pages}
+\begin{itemize}
+\item \url{http://net-informations.com/java/basics/modifiers.htm}
+\item \url{https://guru99.es/java-oops-class-objects/}
+\item \url{https:https://www.tokioschool.com/noticias/que-es-clase-java/}
+\item \url{https://www.unsa.edu.pe/}
+\item \url{https://elvex.ugr.es/decsai/java/}
+\item \url{https://www.tutorialspoint.com/java/java_innerclasses.htm}
+\item \url{https://www.tutorialspoint.com/java/java_object_classes.htm}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+Thanks until\\
+another chance.
+\end{center}
+\end{frame}
+
+\end{document}
